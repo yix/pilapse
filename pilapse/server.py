@@ -29,7 +29,7 @@ class H(http.server.BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'text/html; charset=utf-8')
         self.end_headers()
         f = open(pathlib.Path(__file__).parent.joinpath(
-            'data/index.html').absolute(), 'rb')
+            'index.html').absolute(), 'rb')
         try:
             shutil.copyfileobj(f, self.wfile)
         finally:
@@ -62,7 +62,7 @@ class H(http.server.BaseHTTPRequestHandler):
 
     def get_image(self, path):
         font = ImageFont.truetype(str(pathlib.Path(__file__).parent.joinpath(
-            'data/Product Sans Regular.ttf').absolute()), 25)
+            'Product Sans Regular.ttf').absolute()), 25)
         with Image.open(path) as img:
             draw = ImageDraw.Draw(img)
             text = self.get_file_mtime(path)

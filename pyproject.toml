@@ -1,6 +1,6 @@
 [project]
 name = "pilapse"
-version = "0.0.10"
+version = "0.0.11"
 description = "Raspberry Pi time-lapse service"
 authors = ["Alex McGunn <mcgunn@oo2.be>"]
 
