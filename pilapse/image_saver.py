@@ -18,7 +18,7 @@ class ImageSaver():
         t = datetime.now()
         path = Path(self.path).expanduser().joinpath(
             t.strftime(self.name)).absolute()
-        cmd = ['raspistill', self.raspistill_args, '-o', str(path)]
+        cmd = ['raspistill', *self.raspistill_args.split(), '-o', str(path)]
         logger.debug(' '.join(cmd))
         try:
             out = subprocess.run(cmd, capture_output=True, text=True)
