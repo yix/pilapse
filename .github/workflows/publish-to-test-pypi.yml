@@ -16,7 +16,7 @@ jobs:
     - name: Install pep517
       run: >-
         python -m
-        pip3 install pip install --upgrade --no-cache-dir
+        pip install --upgrade --no-cache-dir
         pip
         pep517
         --user
