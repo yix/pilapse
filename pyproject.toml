@@ -1,6 +1,6 @@
-[tool.poetry]
+[project]
 name = "pilapse"
-version = "0.0.7"
+version = "0.0.8"
 description = "Raspberry Pi time-lapse service"
 authors = ["Alex McGunn <mcgunn@oo2.be>"]
 
@@ -10,6 +10,8 @@ readme = "README.md"
 
 homepage = "https://github.com/yix/pilapse"
 repository = "https://github.com/yix/pilapse"
+
+dependencies = ["Pillow"]
 
 [build-system]
 requires = ["setuptools", "wheel"]
