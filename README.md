@@ -1,5 +1,5 @@
 # pilapse
-A simple time lapse service for Raspberry Pi. It uses `raspistill` binary to capture images.
+A simple time-lapse service for Raspberry Pi. It uses `raspistill` binary to capture images. It's currently capable of periodically capturing of still images and serving last captured image to the web browser.
 
 # Installation
  *requires Python3*
@@ -7,27 +7,21 @@ A simple time lapse service for Raspberry Pi. It uses `raspistill` binary to cap
 ### Using Pip
 
 ```bash
-pip install pilapse
+pip3 install pilapse --user
 ```
 
 ### Manual
 ```bash
 git clone https://github.com/yix/pilapse
 cd pilapse
-python3 -mvenv venv
-. ./venv/bin/activate
-pip install -r requirements.txt
-python -mpilapse --period=300 --path=~/my/timelapse/images
+pip3 install -r requirements.txt --user
 ```
 
 # Usage
 
-### if installed via pip
 ```bash
 pilapse --port 8888 --path ~/pylapse_images --period 60
-```
 
-### if just cloned the repo
-```bash
+# or if just cloned the repo (repository should be your current directory)
 python3 -m pilapse --port 8888 --path ~/pylapse_images --period 60
 ```

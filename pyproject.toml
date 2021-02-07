@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pilapse"
-version = "0.0.5"
+version = "0.0.7"
 description = "Raspberry Pi time-lapse service"
 authors = ["Alex McGunn <mcgunn@oo2.be>"]
 
