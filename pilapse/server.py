@@ -38,8 +38,7 @@ class H(http.server.BaseHTTPRequestHandler):
     def serve_latest_image(self):
         byteIO = io.BytesIO()
         path = self.get_latest_image_path()
-        image = self.get_image(path)
-        image.resize((960, 540))
+        image = self.get_image(path).resize((1280, 720))
         image.save(byteIO, format='JPEG')
         self.send_response(200, "")
         self.send_header("'Content-Length'", str(len(byteIO.getvalue())))
